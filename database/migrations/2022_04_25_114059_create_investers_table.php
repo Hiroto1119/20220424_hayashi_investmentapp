@@ -18,16 +18,11 @@ class CreateInvestersTable extends Migration
             $table->string('company_name');
             $table->string('position');
             $table->integer('investertag_id');
-            $table->string('name');
-            $table->string('email');
+            $table->string('name')->nullable(false);
+            $table->string('email')->nullable(false);
             $table->password()->nullable(false);
-            $table->description('content', 191)->nullable(false);
-            $table->hidden('content', 191)->nullable(false);
-            $table->timestamps();
-
-            $table->id()->autoIncrement();
-            $table->string('name');
-            $table->string('email');
+            $table->string('description');
+            $table->boolean('hidden');
             $table->timestamps();
         });
     }
