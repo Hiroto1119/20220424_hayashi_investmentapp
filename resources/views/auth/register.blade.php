@@ -47,12 +47,12 @@
 
             <!-- purpose -->
             <div class="mt-4">
-                <x-label for="invester" :value="__('Purpose')" />
+                <x-label for="purpose" :value="__('Purpose')" />
 
                 {{-- <x-input id="invester" class="block mt-1 w-full"
                                 type="number"
                                 name="invester" required /> --}}
-                <select name="month" id="invester" class="block mt-1 w-full" name="invester" required />
+                <select name="purpose" id="purpose" class="block mt-1 w-full" name="invester" required />
                 <option value="invester">投資家として登録する</option>
                 <option value="entrepreneur">起業家として登録する</option>
                 </select>

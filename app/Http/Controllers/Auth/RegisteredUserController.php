@@ -55,7 +55,7 @@ class RegisteredUserController extends Controller
             'investertag_id' => $request->investertag_id,
             'entrepreneurtag_id' => $request->entrepreneurtag_id,
             'description' => $request->description,
-            'purpose' => $request->invester,
+            'purpose' => $request->purpose,
             'hidden' => $request->hidden
         ]);
 
