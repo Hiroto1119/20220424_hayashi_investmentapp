@@ -37,12 +37,26 @@ class RegisteredUserController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
+            'company_name' => ['string', 'max:255'],
+            'position' => ['string', 'max:255'],
+            'investertag_id' => ['string', 'max:255'],
+            'entrepreneurtag_id' => ['string', 'max:255'],
+            'description' => ['string', 'max:255'],
+            'invester' => ['boolean', 'max:255'],
+            'hidden' => ['boolean', 'max:255']
         ]);
 
         $user = User::create([
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
+            'company_name' => $request->company_name,
+            'position' => $request->position,
+            'investertag_id' => $request->investertag_id,
+            'entrepreneurtag_id' => $request->entrepreneurtag_id,
+            'description' => $request->description,
+            'invester' => $request->invester,
+            'hidden' => $request->hidden
         ]);
 
         event(new Registered($user));

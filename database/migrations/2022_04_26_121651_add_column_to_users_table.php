@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateInvestersTable extends Migration
+class AddColumnToUsersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,17 +13,14 @@ class CreateInvestersTable extends Migration
      */
     public function up()
     {
-        Schema::create('investers', function (Blueprint $table) {
-            $table->id()->autoIncrement();
+        Schema::table('users', function (Blueprint $table) {
             $table->string('company_name');
             $table->string('position');
-            $table->integer('investertag_id');
-            $table->string('name')->nullable(false);
-            $table->string('email')->nullable(false);
-            $table->password()->nullable(false);
+            $table->string('investertag_id');
+            $table->string('entrepreneurtag_id');
             $table->string('description');
+            $table->boolean('invester');
             $table->boolean('hidden');
-            $table->timestamps();
         });
     }
 
@@ -34,6 +31,8 @@ class CreateInvestersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('investers');
+        Schema::table('users', function (Blueprint $table) {
+            //
+        });
     }
 }
