@@ -45,6 +45,19 @@
                                 name="password_confirmation" required />
             </div>
 
+            <!-- purpose -->
+            <div class="mt-4">
+                <x-label for="invester" :value="__('Purpose')" />
+
+                {{-- <x-input id="invester" class="block mt-1 w-full"
+                                type="number"
+                                name="invester" required /> --}}
+                <select name="month" id="invester" class="block mt-1 w-full" name="invester" required />
+                <option value="invester">投資家として登録する</option>
+                <option value="entrepreneur">起業家として登録する</option>
+                </select>
+            </div>
+
             <div class="flex items-center justify-end mt-4">
                 <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('login') }}">
                     {{ __('Already registered?') }}

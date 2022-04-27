@@ -42,7 +42,7 @@ class RegisteredUserController extends Controller
             'investertag_id' => ['string', 'max:255'],
             'entrepreneurtag_id' => ['string', 'max:255'],
             'description' => ['string', 'max:255'],
-            'invester' => ['boolean', 'max:255'],
+            'purpose' => ['boolean', 'max:255'],
             'hidden' => ['boolean', 'max:255']
         ]);
 
@@ -55,7 +55,7 @@ class RegisteredUserController extends Controller
             'investertag_id' => $request->investertag_id,
             'entrepreneurtag_id' => $request->entrepreneurtag_id,
             'description' => $request->description,
-            'invester' => $request->invester,
+            'purpose' => $request->invester,
             'hidden' => $request->hidden
         ]);
 

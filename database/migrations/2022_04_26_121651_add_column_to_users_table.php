@@ -14,13 +14,13 @@ class AddColumnToUsersTable extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->string('company_name');
-            $table->string('position');
-            $table->string('investertag_id');
-            $table->string('entrepreneurtag_id');
-            $table->string('description');
-            $table->boolean('invester');
-            $table->boolean('hidden');
+            $table->string('company_name')->nullable();
+            $table->string('position')->nullable();
+            $table->string('investertag_id')->nullable();
+            $table->string('entrepreneurtag_id')->nullable();
+            $table->string('description')->nullable();
+            $table->boolean('purpose');
+            $table->boolean('hidden')->nullable();
         });
     }
 

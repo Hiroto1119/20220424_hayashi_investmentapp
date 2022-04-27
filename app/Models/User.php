@@ -25,7 +25,7 @@ class User extends Authenticatable
         'investertag_id',
         'entrepreneurtag_id',
         'description',
-        'invester',
+        'purpose',
         'hidden'
     ];
 
