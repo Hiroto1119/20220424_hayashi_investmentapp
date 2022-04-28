@@ -52,9 +52,9 @@
                 {{-- <x-input id="invester" class="block mt-1 w-full"
                                 type="number"
                                 name="invester" required /> --}}
-                <select name="purpose" id="purpose" class="block mt-1 w-full" name="invester" required />
-                <option value="invester">投資家として登録する</option>
-                <option value="entrepreneur">起業家として登録する</option>
+                <select name="purpose" id="purpose" class="block mt-1 w-full" required />
+                <option value="0">投資家として登録する</option>
+                <option value="1">起業家として登録する</option>
                 </select>
             </div>
 
