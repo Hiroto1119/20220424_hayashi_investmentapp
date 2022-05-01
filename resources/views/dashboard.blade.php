@@ -14,6 +14,4 @@
             </div>
         </div>
     </div>
-
-    あああ
 </x-app-layout>
