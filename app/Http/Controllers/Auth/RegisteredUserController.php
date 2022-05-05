@@ -60,8 +60,8 @@ class RegisteredUserController extends Controller
         ]);
 
         // 林追加
-        // $userData = User::all();
-        //     return view('dashboard', ['userData' => $userData]);
+        $userData = User::all();
+            return view('dashboard', ['userData' => $userData]);
 
         event(new Registered($user));
 
