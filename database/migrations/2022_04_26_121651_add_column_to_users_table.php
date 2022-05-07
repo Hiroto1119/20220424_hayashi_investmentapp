@@ -16,6 +16,7 @@ class AddColumnToUsersTable extends Migration
         Schema::table('users', function (Blueprint $table) {
             $table->string('company_name')->nullable();
             $table->string('position')->nullable();
+            $table->string('image')->nullable();
             $table->string('investertag_id')->nullable();
             $table->string('entrepreneurtag_id')->nullable();
             $table->string('description')->nullable();

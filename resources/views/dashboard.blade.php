@@ -31,7 +31,7 @@
                 <div class="p-6 bg-white border-b border-gray-200">
                     You're logged in!<br>
                     @foreach($usersInfo as $userInfo)
-
+                    <img src="{{ $userInfo->image }}"><br>
                     {{ $userInfo->name }}<br>
                     {{ $userInfo->company_name }}<br>
                     {{ $userInfo->position }}<br>
