@@ -59,13 +59,14 @@ class RegisteredUserController extends Controller
             'hidden' => $request->hidden
         ]);
 
-        // 林追加
-        // $userData = User::all();
-        //     return view('dashboard', ['userData' => $userData]);
-
         event(new Registered($user));
 
         Auth::login($user);
+
+
+        // 林追加
+        // $userData = User::all();
+        //     return view('dashboard', ['userData' => $userData]);
 
         return redirect(RouteServiceProvider::HOME);
     }

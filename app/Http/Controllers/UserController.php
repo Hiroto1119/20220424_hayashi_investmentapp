@@ -9,7 +9,7 @@ class UserController extends Controller
 {
     public function index()
     {
-        $userData = User::all();
-            return view('dashboard', ['userData' => $userData]);
+        $usersInfo = User::all();
+            return view('dashboard', ['usersInfo' => $usersInfo]);
     }
 }
